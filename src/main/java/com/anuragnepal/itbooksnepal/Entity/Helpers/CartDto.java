@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CartDto {
-  private Integer price;
+  private Double price;
 
     private List<CartItemDto> cartList;
 }

@@ -56,7 +56,7 @@ public Cart addToCart( CartHelper cartHelper)
 
         List<Cart> cartList = cartRepository.findByUsers_IdOrderByCreateDateDesc(user.getId());
         List<CartItemDto> cartItems = new ArrayList<>();
-        Integer totalPrice = 0;
+        Double totalPrice = 0.00;
         for(Cart cart:cartList)
         {
 CartItemDto cartItemDto = new CartItemDto(cart);

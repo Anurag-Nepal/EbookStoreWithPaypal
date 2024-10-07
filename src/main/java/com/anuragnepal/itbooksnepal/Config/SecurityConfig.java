@@ -42,7 +42,9 @@ public class SecurityConfig {
                 .cors(c -> c.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/register", "/login", "/verify","/forgot ","/api/orders","/token","/success","/cancel")
+                        .requestMatchers("/register", "/login", "/verify","/forgot ","/api/orders","/token","/hey","/cancel")
+                        .permitAll()
+                        .requestMatchers("/complete/payment")
                         .permitAll()
                         .requestMatchers("/addto/**","books/**").hasAnyRole("USER","ADMIN")
                         .anyRequest()
